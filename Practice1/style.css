@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    transition: ease-in 1s all;
+}
+main{
+    margin: 0 auto;
+    height: 600px;
+    width: 400px;
+    box-shadow: 0 0 10px rgba(15, 15, 15, 0.425);
+    position: relative;
+}
+
+img{
+    margin-top: 50px;
+    width: 70%;
+    height: 30%;
+
+}
+.sale_content{
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    width: auto;
+}
+.sale_content div{
+    width: 30%;
+    height: 20%;
+    background-color: yellow;
+    position: absolute;
+    top:20px;
+    right: -10px;
+
+}
+.text{
+    position: relative;
+    top: 90px;
+    margin: 0 auto;
+    max-width: 70%;
+    text-align: center;
+}
+.new{
+    bottom: 50px;
+    position: absolute;
+    left: -10px;
+    background-color: yellow;
+    width: 30%;
+    height: 40px;
+}
+.new p, .sale_content p{
+    line-height: 40px;
+    margin: 0;
+    text-align: center;
+}
+
+.new div:last-of-type, .sale_content div:last-of-type{
+    z-index: 10
+}
+
+.sale_content img:last-of-type{
+    position: absolute;
+    right: 70px;
+    height: 100%;
+}
+/* ==================================================== 
+IMAGES SWAP */
+.sale_content:not(:hover) img:first-of-type{
+    transform: scaleX(1);
+    transform-origin: left;
+
+}
+.sale_content:not(:hover) img:last-of-type{
+    transform: scaleX(0);
+    transform-origin: left;
+}
+.sale_content:hover img:first-of-type{
+    transform: scaleX(-0);
+    transform-origin: left;
+}
+.sale_content:hover img:last-of-type{
+    transform: scaleX(1);
+    transform-origin: right;
+    color: #DCF4F4
+
+}
+main:hover >img{
+    position: relative;
+   transform: translate(200px,50px) scaleX(1.5) skew(1.2,1.5);
+    opacity: 0;
+}
