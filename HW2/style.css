@@ -1,0 +1,119 @@
+*{
+    transition: linear .3s all;
+    box-sizing: border-box;
+}
+.flex_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.head{
+    width: 600px;
+    height: 200px;
+    text-align: center;
+}
+.head h1{
+    font-size: 34px;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    letter-spacing: 6px;
+    padding-top: 2px;
+    padding-left: 11px;
+}
+.head p{
+    font-size: 16px;
+    margin-top: 35px;
+    font-family: 'Lato', sans-serif;
+    padding: 0px 10px;
+}
+hr{
+    max-width: 45px;
+    height: 4px;
+    margin-top: 15px;
+}
+
+/*=================   MAIN   ==========================*/
+
+.container{                    
+    display: flex;            /*4 BLOCKS*/
+    justify-content: center;
+
+}
+
+.container [class*="img"]{            
+    width: 270px;
+    height: 270px; 
+    margin-left: 15px;                    /* img_name */
+    margin-right: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(190, 190, 190, 0.918);
+}
+.content{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #18b5dc;
+    opacity: 0;
+
+}
+
+.content div{
+    height: 40px;
+    width: 40px;
+    background-color: #5ecbe7;
+    position: absolute;
+    display: flex;                   /*  BLOCK INSIDE  */
+    align-items: center;
+    justify-content: center;
+}
+.fb-align{
+    top: 115px;
+    left: 66px;
+}
+.google-align{
+    top:115px;
+    left:114px;
+}
+.twitter-align{
+    top:115px;
+    right: 69px;
+}
+
+[class*="img_"] p:first-of-type{
+    font-size: 19px;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding-top: 15px;
+}
+[class*="img_"] p:last-of-type{
+    font-size: 14px;
+    font-weight: lighter;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    opacity: 0.6;
+   
+}
+.img_john{
+    background-image:url(./img/01.png);
+}
+.img_alex{
+    background-image:url(./img/02.png);
+}
+.img_elena{
+    background-image:url(./img/03.png);
+}
+.img_lily{
+    background-image:url(./img/04.png);
+}
+/* ANIMATIONS */
+[class*="img"]:hover .content{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transform-origin: 100% -55%;
+}
+.content:not(:hover){
+    opacity: 0;
+    transform: translateY(130px) scaleY(0);
+}
