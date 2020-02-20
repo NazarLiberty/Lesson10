@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-    transition: ease-in 1s all;
+    transition: ease-in .7s all;
 }
 main{
     margin: 0 auto;
